@@ -176,7 +176,7 @@ class FuckBot:
     PATH_RESULT = os.path.join(PATH_ROOT, "results")
 
     config = configparser.ConfigParser()
-    config.read('OXiZ3N.ini')
+    config.read('FuckBot.ini')
 
     SCRAPESTACK_KEY = config.get("scrapestack", "scrapestack_key")
     
